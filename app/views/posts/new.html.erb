@@ -1,0 +1,29 @@
+<div class="container">
+
+    <h1 class="mt-5">Ingresa</h1>
+    <br>
+
+
+    <%= form_with model: @post, method: :post do |form| %>
+        <div class="border p-5 shadow col-6">
+            <div class= "mb-3">
+                <%= form.label :title, "Usuario", class: "form-label" %>
+                <%= form.text_field :title, class: "form-control" %>
+            </div>
+            <div class= "mb-3">
+                <%= form.label :content, "Contraseña", class: "form-label"%>
+                <%= form.text_area :content, class: "form-control" %>
+            </div>
+            <div class= "mb-3 text-center">
+                <%= form.submit "Ingresar", class: "btn btn-warning mt-5 mb-4 " %>
+            </div>
+        </div>
+    <% end %>
+
+
+</div>
+
+
+<div>
+    <%= link_to 'Volver al Inicio', root_path, class:"btn btn-dark" %>
+</div>
